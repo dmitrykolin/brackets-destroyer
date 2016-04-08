@@ -39,7 +39,7 @@
     "test": "test",
     "start": "webpack --progress --colors --watch",
     "build": "webpack --progress --colors --p",
-    "heroku-postbuild": "webpack --progress --colors --p"
+    "heroku-postbuild": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",
