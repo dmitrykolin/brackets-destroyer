@@ -1,6 +1,6 @@
 //PRINTER
-var listener = require('js/grammar/BracketsDestroyerListener.js');
-var expressionUtils = require('js/grammar-utils.js');
+var listener = require('./grammar/BracketsDestroyerListener.js');
+var expressionUtils = require('./grammar-utils.js').expressionUtils;
 
 var ExpressionPrinter = function() {
     listener.BracketsDestroyerListener.call(this); // inherit default listener
@@ -51,4 +51,4 @@ ExpressionPrinter.prototype.exitFunctionElement = function(ctx) {
     this.out = this.out + ')';
 };
 
-exports = ExpressionPrinter;
+exports.printer = ExpressionPrinter;

@@ -1,0 +1,1 @@
+import bracketsDestroyerMain from './js/brackets-destroyer-main.jsx';

@@ -1,6 +1,6 @@
 //ANALYZER
-var listener = require('js/grammar/BracketsDestroyerListener.js');
-var expressionUtils = require('js/grammar-utils.js');
+var listener = require('./grammar/BracketsDestroyerListener.js');
+var expressionUtils = require('./grammar-utils.js').expressionUtils;
 
 var Analyzer = function() {
     listener.BracketsDestroyerListener.call(this); // inherit default listener
@@ -143,4 +143,4 @@ Analyzer.prototype.enterFunctionElement = function(ctx) {
     ctx.isGrouping = true;
 };
 
-exports = Analyzer;
+exports.analyzer = Analyzer;

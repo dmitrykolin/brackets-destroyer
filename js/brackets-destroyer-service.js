@@ -1,16 +1,16 @@
-var bdLexer = require('js/grammar/BracketsDestroyerLexer.js');
-var bdParser = require('js/grammar/BracketsDestroyerParser.js');
-var bdVisitor = require('js/grammar/BracketsDestroyerVisitor.js');
-var antlr4 = require('antlr4/index');
+var bdLexer = require('./grammar/BracketsDestroyerLexer.js');
+var bdParser = require('./grammar/BracketsDestroyerParser.js');
+var bdVisitor = require('./grammar/BracketsDestroyerVisitor.js');
+var antlr4 = require('antlr4/index.js');
 
-var expressionUtils = require('js/grammar-utils.js');
-var expressionPickedBracketsPrinter = require('js/expression-picked-brackets-printer.js');
-var expressionAnalyzedPrinter = require('js/expression-analyzed-printer.js');
-var expressionAnalyzer = require('js/expression-analyzer.js');
-var groupCalculator = require('js/expression-group-calculator.js');
+var expressionUtils = require('./grammar-utils.js').expressionUtils;
+var expressionPickedBracketsPrinter = require('./expression-picked-brackets-printer.js').printer;
+var expressionAnalyzedPrinter = require('./expression-analyzed-printer.js').analyzer;
+var expressionAnalyzer = require('./expression-analyzer.js').analyzer;
+var groupCalculator = require('./expression-group-calculator.js').groupCalculator;
 
 var service = {
-    version: "0.1",
+    version: "1.0.0",
     data: {
         progress: 0,
         groupCount: 0,
@@ -130,4 +130,4 @@ var service = {
     }
 };
 
-exports = service;
+exports.service = service;

@@ -52,4 +52,4 @@ var expressionUtils = {
         return false;
     }
 };
-exports = expressionUtils;
+exports.expressionUtils = expressionUtils;

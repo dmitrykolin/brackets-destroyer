@@ -1,6 +1,6 @@
 //PRINTER
-var listener = require('js/grammar/BracketsDestroyerListener.js');
-var expressionUtils = require('js/grammar-utils.js');
+var listener = require('./grammar/BracketsDestroyerListener.js');
+var expressionUtils = require('./grammar-utils.js').expressionUtils;
 
 var groupCalculator = function() {
     listener.BracketsDestroyerListener.call(this); // inherit default listener
@@ -13,9 +13,7 @@ groupCalculator.prototype.constructor = groupCalculator;
 groupCalculator.prototype.enterMathExpr = function(ctx) {
     this.count = 0;
 };
-
 groupCalculator.prototype.enterExprGroup = function(ctx) {
     this.count++;
 };
-
-exports = groupCalculator;
+exports.groupCalculator = groupCalculator;
