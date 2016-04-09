@@ -16,7 +16,7 @@ complexExpr
     |   atomicExpr
     ;
 
-    negativeExpr
+negativeExpr
     :   MINUS atomicExpr
     ;
 
@@ -26,19 +26,20 @@ atomicExpr
     |   element
     ;
 
-firstSign
-    :   (MULTIPLY|DIVIDE)
+FUNCTION_NAME
+    :   'sin'
+    |   'cos'
+    |   'tg'
+    |   'lg'
+    |   'ln'
     ;
 
-MULTIPLY
-    :   '*';
+NUMBER
+    :   [0-9]+
+    ;
 
-DIVIDE
-    :   '/';
-
-
-secondSign
-    :   (PLUS|MINUS)
+VAR
+    :   [a-z]+
     ;
 
 PLUS
@@ -46,6 +47,20 @@ PLUS
 
 MINUS
     :   '-';
+
+MULTIPLY
+    :   '*';
+
+DIVIDE
+    :   '/';
+
+firstSign
+    :   (MULTIPLY|DIVIDE)
+    ;
+
+secondSign
+    :   (PLUS|MINUS)
+    ;
 
 exprGroup
     :   '(' complexExpr ')'
@@ -55,19 +70,7 @@ functionElement
     :   FUNCTION_NAME '(' complexExpr ')'
     ;
 
-FUNCTION_NAME
-    :   [a-z]+
-    ;
-
 element
-    :   NUMBER
-    |   VARIABLE
-    ;
-
-NUMBER
-    :   [0-9]+
-    ;
-
-VARIABLE
-    :   [a-z]+
+    :   VAR
+    |   NUMBER
     ;

@@ -1,4 +1,4 @@
-// Generated from D:/Projects/Math/antlr_gr/BracketsDestoyer/grammar\BracketsDestroyer.g4 by ANTLR 4.5.1
+// Generated from D:/Projects/Math/brackets-destroyer/grammar\BracketsDestroyer.g4 by ANTLR 4.5.1
 // jshint ignore: start
 var antlr4 = require('antlr4/index');
 

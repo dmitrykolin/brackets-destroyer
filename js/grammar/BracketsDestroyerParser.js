@@ -1,4 +1,4 @@
-// Generated from D:/Projects/Math/antlr_gr/BracketsDestoyer/grammar\BracketsDestroyer.g4 by ANTLR 4.5.1
+// Generated from D:/Projects/Math/brackets-destroyer/grammar\BracketsDestroyer.g4 by ANTLR 4.5.1
 // jshint ignore: start
 var antlr4 = require('antlr4/index');
 var BracketsDestroyerListener = require('./BracketsDestroyerListener').BracketsDestroyerListener;
@@ -19,10 +19,10 @@ var serializedATN = ["\u0003\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd",
     "\u0006\u0003\u0007\u0003\u0007\u0003\b\u0003\b\u0003\b\u0003\b\u0003",
     "\t\u0003\t\u0003\t\u0003\t\u0003\t\u0003\n\u0003\n\u0003\n\u0002\u0003",
     "\u0004\u000b\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0002\u0005\u0003",
-    "\u0002\u0006\u0007\u0003\u0002\b\t\u0003\u0002\u000b\fF\u0002\u001d",
-    "\u0003\u0002\u0002\u0002\u0004\"\u0003\u0002\u0002\u0002\u00061\u0003",
-    "\u0002\u0002\u0002\b7\u0003\u0002\u0002\u0002\n9\u0003\u0002\u0002\u0002",
-    "\f;\u0003\u0002\u0002\u0002\u000e=\u0003\u0002\u0002\u0002\u0010A\u0003",
+    "\u0002\u000b\f\u0003\u0002\t\n\u0003\u0002\u0007\bF\u0002\u001d\u0003",
+    "\u0002\u0002\u0002\u0004\"\u0003\u0002\u0002\u0002\u00061\u0003\u0002",
+    "\u0002\u0002\b7\u0003\u0002\u0002\u0002\n9\u0003\u0002\u0002\u0002\f",
+    ";\u0003\u0002\u0002\u0002\u000e=\u0003\u0002\u0002\u0002\u0010A\u0003",
     "\u0002\u0002\u0002\u0012F\u0003\u0002\u0002\u0002\u0014\u0015\u0005",
     "\u0004\u0003\u0002\u0015\u0016\u0007\u0005\u0002\u0002\u0016\u0018\u0003",
     "\u0002\u0002\u0002\u0017\u0014\u0003\u0002\u0002\u0002\u0018\u001b\u0003",
@@ -38,13 +38,13 @@ var serializedATN = ["\u0003\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd",
     "+-\u0003\u0002\u0002\u0002,$\u0003\u0002\u0002\u0002,(\u0003\u0002\u0002",
     "\u0002-0\u0003\u0002\u0002\u0002.,\u0003\u0002\u0002\u0002./\u0003\u0002",
     "\u0002\u0002/\u0005\u0003\u0002\u0002\u00020.\u0003\u0002\u0002\u0002",
-    "12\u0007\t\u0002\u000223\u0005\b\u0005\u00023\u0007\u0003\u0002\u0002",
+    "12\u0007\n\u0002\u000223\u0005\b\u0005\u00023\u0007\u0003\u0002\u0002",
     "\u000248\u0005\u0010\t\u000258\u0005\u000e\b\u000268\u0005\u0012\n\u0002",
     "74\u0003\u0002\u0002\u000275\u0003\u0002\u0002\u000276\u0003\u0002\u0002",
     "\u00028\t\u0003\u0002\u0002\u00029:\t\u0002\u0002\u0002:\u000b\u0003",
     "\u0002\u0002\u0002;<\t\u0003\u0002\u0002<\r\u0003\u0002\u0002\u0002",
     "=>\u0007\u0003\u0002\u0002>?\u0005\u0004\u0003\u0002?@\u0007\u0004\u0002",
-    "\u0002@\u000f\u0003\u0002\u0002\u0002AB\u0007\n\u0002\u0002BC\u0007",
+    "\u0002@\u000f\u0003\u0002\u0002\u0002AB\u0007\u0006\u0002\u0002BC\u0007",
     "\u0003\u0002\u0002CD\u0005\u0004\u0003\u0002DE\u0007\u0004\u0002\u0002",
     "E\u0011\u0003\u0002\u0002\u0002FG\t\u0004\u0002\u0002G\u0013\u0003\u0002",
     "\u0002\u0002\b\u0019\u001d\",.7"].join("");
@@ -56,11 +56,11 @@ var decisionsToDFA = atn.decisionToState.map( function(ds, index) { return new a
 
 var sharedContextCache = new antlr4.PredictionContextCache();
 
-var literalNames = [ 'null', "'('", "')'", 'null', "'*'", "'/'", "'+'", 
-                     "'-'" ];
+var literalNames = [ 'null', "'('", "')'", 'null', 'null', 'null', 'null', 
+                     "'+'", "'-'", "'*'", "'/'" ];
 
-var symbolicNames = [ 'null', 'null', 'null', "NEWLINE", "MULTIPLY", "DIVIDE", 
-                      "PLUS", "MINUS", "FUNCTION_NAME", "NUMBER", "VARIABLE" ];
+var symbolicNames = [ 'null', 'null', 'null', "NEWLINE", "FUNCTION_NAME", 
+                      "NUMBER", "VAR", "PLUS", "MINUS", "MULTIPLY", "DIVIDE" ];
 
 var ruleNames =  [ "mathExpr", "complexExpr", "negativeExpr", "atomicExpr", 
                    "firstSign", "secondSign", "exprGroup", "functionElement", 
@@ -88,13 +88,13 @@ BracketsDestroyerParser.EOF = antlr4.Token.EOF;
 BracketsDestroyerParser.T__0 = 1;
 BracketsDestroyerParser.T__1 = 2;
 BracketsDestroyerParser.NEWLINE = 3;
-BracketsDestroyerParser.MULTIPLY = 4;
-BracketsDestroyerParser.DIVIDE = 5;
-BracketsDestroyerParser.PLUS = 6;
-BracketsDestroyerParser.MINUS = 7;
-BracketsDestroyerParser.FUNCTION_NAME = 8;
-BracketsDestroyerParser.NUMBER = 9;
-BracketsDestroyerParser.VARIABLE = 10;
+BracketsDestroyerParser.FUNCTION_NAME = 4;
+BracketsDestroyerParser.NUMBER = 5;
+BracketsDestroyerParser.VAR = 6;
+BracketsDestroyerParser.PLUS = 7;
+BracketsDestroyerParser.MINUS = 8;
+BracketsDestroyerParser.MULTIPLY = 9;
+BracketsDestroyerParser.DIVIDE = 10;
 
 BracketsDestroyerParser.RULE_mathExpr = 0;
 BracketsDestroyerParser.RULE_complexExpr = 1;
@@ -184,7 +184,7 @@ BracketsDestroyerParser.prototype.mathExpr = function() {
             this.state = 23;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
-            while((((_la) & ~0x1f) == 0 && ((1 << _la) & ((1 << BracketsDestroyerParser.T__0) | (1 << BracketsDestroyerParser.MINUS) | (1 << BracketsDestroyerParser.FUNCTION_NAME) | (1 << BracketsDestroyerParser.NUMBER) | (1 << BracketsDestroyerParser.VARIABLE))) !== 0)) {
+            while((((_la) & ~0x1f) == 0 && ((1 << _la) & ((1 << BracketsDestroyerParser.T__0) | (1 << BracketsDestroyerParser.FUNCTION_NAME) | (1 << BracketsDestroyerParser.NUMBER) | (1 << BracketsDestroyerParser.VAR) | (1 << BracketsDestroyerParser.MINUS))) !== 0)) {
                 this.state = 18;
                 this.complexExpr(0);
                 this.state = 19;
@@ -302,7 +302,7 @@ BracketsDestroyerParser.prototype.complexExpr = function(_p) {
         case BracketsDestroyerParser.T__0:
         case BracketsDestroyerParser.FUNCTION_NAME:
         case BracketsDestroyerParser.NUMBER:
-        case BracketsDestroyerParser.VARIABLE:
+        case BracketsDestroyerParser.VAR:
             this.state = 31;
             this.atomicExpr();
             break;
@@ -513,7 +513,7 @@ BracketsDestroyerParser.prototype.atomicExpr = function() {
             this.exprGroup();
             break;
         case BracketsDestroyerParser.NUMBER:
-        case BracketsDestroyerParser.VARIABLE:
+        case BracketsDestroyerParser.VAR:
             this.enterOuterAlt(localctx, 3);
             this.state = 52;
             this.element();
@@ -855,12 +855,12 @@ function ElementContext(parser, parent, invokingState) {
 ElementContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
 ElementContext.prototype.constructor = ElementContext;
 
-ElementContext.prototype.NUMBER = function() {
-    return this.getToken(BracketsDestroyerParser.NUMBER, 0);
+ElementContext.prototype.VAR = function() {
+    return this.getToken(BracketsDestroyerParser.VAR, 0);
 };
 
-ElementContext.prototype.VARIABLE = function() {
-    return this.getToken(BracketsDestroyerParser.VARIABLE, 0);
+ElementContext.prototype.NUMBER = function() {
+    return this.getToken(BracketsDestroyerParser.NUMBER, 0);
 };
 
 ElementContext.prototype.enterRule = function(listener) {
@@ -897,7 +897,7 @@ BracketsDestroyerParser.prototype.element = function() {
         this.enterOuterAlt(localctx, 1);
         this.state = 68;
         _la = this._input.LA(1);
-        if(!(_la===BracketsDestroyerParser.NUMBER || _la===BracketsDestroyerParser.VARIABLE)) {
+        if(!(_la===BracketsDestroyerParser.NUMBER || _la===BracketsDestroyerParser.VAR)) {
         this._errHandler.recoverInline(this);
         }
         else {
