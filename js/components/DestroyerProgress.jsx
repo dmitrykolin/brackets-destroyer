@@ -3,13 +3,6 @@ import React from 'react';
 export default class DestroyerProgress extends React.Component {
     constructor(props) {
        super(props);
-
-        this.state = {
-            data: null
-        };
-    }
-    componentDidMount() {
-        this.setState({data: this.props.data});
     }
     render() {
         var progress = 0;

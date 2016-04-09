@@ -3,13 +3,6 @@ import React from 'react';
 export default class ProcessExpressionButton extends React.Component {
     constructor(props) {
        super(props);
-
-        this.state = {
-            data: null
-        };
-    }
-    componentDidMount() {
-        this.setState({data: this.props.data});
     }
     onClickProcessExpressionButton (event) {
         this.props.processExpressionFunction();
@@ -18,9 +11,9 @@ export default class ProcessExpressionButton extends React.Component {
         var btnClass = "btn-primary";
         var text = "Destroy Brackets";
         var disabledButton = false;
-        var done = this.state.data != null ? this.state.data.done : false;
-        var error = this.state.data != null ? this.state.data.error : '';
-        var errorText = this.state.data != null ? this.state.data.errorText : '';
+        var done = this.props.data != null ? this.props.data.done : false;
+        var error = this.props.data != null ? this.props.data.error : '';
+        var errorText = this.props.data != null ? this.props.data.errorText : '';
         if (done) {
             disabledButton = true;
             btnClass = "btn-success";
