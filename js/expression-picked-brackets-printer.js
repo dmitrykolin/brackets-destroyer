@@ -16,12 +16,16 @@ ExpressionPrinter.prototype.out = '';
 ExpressionPrinter.prototype.enterExprGroup = function(ctx) {
     if (ctx.picked) {
         this.out = this.out + '<span class="picked-brackets"><span class="picked-bracket-item">' + ctx.children[0].getText() + '</span>';
+    } else {
+        this.out = this.out + ctx.children[0].getText();
     }
 };
 
 ExpressionPrinter.prototype.exitExprGroup = function(ctx) {
     if (ctx.picked) {
         this.out = this.out + '<span class="picked-bracket-item">' + ctx.children[2].getText() + '</span></span>';
+    } else {
+        this.out = this.out + ctx.children[2].getText();
     }
 };
 
